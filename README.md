@@ -45,7 +45,7 @@ Audit policy configuration is an important first step in security monitoring bec
 
 ## 2. Enabling Process Creation Auditing
 
-![Process Creation Configuration](Splunk%202%20Process%20creation.png)
+![Process Creation Auditing](screenshots/Splunk%202%20Process%20creation.png)
 
 Configured process creation auditing to monitor when new processes are launched on the Windows system.
 
