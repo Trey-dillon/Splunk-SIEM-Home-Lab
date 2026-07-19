@@ -1,6 +1,6 @@
 # 📊 Splunk SIEM Home Lab
 
-## 🎯 Project Overview
+## Project Overview
 
 This project documents the implementation of a Splunk SIEM home lab used to collect, monitor, and investigate Windows security events.
 
@@ -20,7 +20,7 @@ The project simulates a basic Security Operations Center (SOC) workflow by colle
 
 ---
 
-# 🛠️ Lab Environment
+# Lab Environment
 
 - Splunk SIEM
 - Windows 11
@@ -31,7 +31,7 @@ The project simulates a basic Security Operations Center (SOC) workflow by colle
 
 ---
 
-# 🔍 Investigation Walkthrough
+# Investigation Walkthrough
 
 ## 1. Configuring Windows Audit Policies
 
@@ -147,7 +147,7 @@ Organizing events chronologically helps establish a sequence of activity and pro
 
 ---
 
-# 🔎 Investigation Summary
+# Investigation Summary
 
 During this project, I configured Windows auditing and used Splunk to collect, search, and investigate security telemetry.
 
@@ -166,7 +166,7 @@ This project demonstrates a basic SIEM workflow used in Security Operations Cent
 
 ---
 
-# 📖 Learning Outcomes
+# Learning Outcomes
 
 Through this project I developed practical experience with:
 
