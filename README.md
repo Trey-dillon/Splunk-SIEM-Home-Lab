@@ -69,7 +69,7 @@ Confirmed additional Windows event data was being successfully received and proc
 
 ## 4. Investigating Account Creation Activity
 
-![Account Creation Event](Splunk%204%20acct%20creation%20event.png)
+![Account Creation Event](screenshots/Splunk%204%20acct%20creation%20event.png)
 
 Investigated a Windows account creation event within Splunk.
 
@@ -79,7 +79,7 @@ Monitoring account creation is important because unauthorized accounts can poten
 
 ## 5. Generating and Investigating a Failed Login
 
-![Failed Login](Splunk%204%20creating%20a%20failed%20login.png)
+![Process Creation Event Part 2](screenshots/Splunk%204%20process%20creation%20evt%20pt.2.png)
 
 Generated a failed authentication event to simulate suspicious login activity.
 
