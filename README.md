@@ -89,13 +89,13 @@ Failed authentication attempts can be important indicators during a security inv
 
 ## 6. Investigating Process Creation Events
 
-![Process Creation Event](Splunk%204%20process%20creation%20evt.png)
+![Process Creation Event](screenshots/Splunk%204%20process%20creation%20evt.png)
 
 Investigated process creation events collected from the Windows system.
 
 Process creation logs provide visibility into programs and commands executed on a system and can assist analysts in identifying suspicious activity.
 
-![Process Creation Event Part 2](Splunk%204%20process%20creation%20evt%20pt.2.png)
+![PowerShell Process Detection](screenshots/Splunk%205%20powershell-process-detection.png)
 
 Reviewed additional process creation event data to further analyze the activity recorded by Windows.
 
@@ -103,7 +103,7 @@ Reviewed additional process creation event data to further analyze the activity 
 
 ## 7. PowerShell Process Detection
 
-![PowerShell Process Detection](Splunk%205%20powershell-process-detection.png)
+![PowerShell Process Detection](screenshots/Splunk%205%20powershell-process-detection.png)
 
 Created a Splunk search to identify PowerShell process activity.
 
@@ -115,7 +115,7 @@ Monitoring PowerShell activity helps analysts identify potentially suspicious co
 
 ## 8. Building a SOC Dashboard
 
-![SOC Dashboard](Splunk%206%20splunk-soc-dashboard.png)
+![Splunk SOC Dashboard](screenshots/Splunk%206%20splunk-soc-dashboard.png)
 
 Created a security monitoring dashboard to provide a centralized view of important activity observed in the lab environment.
 
@@ -125,13 +125,13 @@ Dashboards can help analysts quickly identify trends and prioritize events for f
 
 ## 9. Building an Investigation Timeline
 
-![Investigation Timeline](Splunk%207%20building%20a%20timeline.png)
+![Investigation Timeline](screenshots/Splunk%207%20building%20a%20timeline.png)
 
 Built an investigation timeline by organizing security events in chronological order.
 
 A timeline allows an analyst to understand how events occurred over time and helps connect related activities during an investigation.
 
-![Investigation Timeline Part 2](Splunk%207%20building%20a%20timeline%20pt.2.png)
+![Investigation Timeline Part 2](screenshots/Splunk%207%20building%20a%20timeline%20pt.2.png)
 
 Expanded the timeline to correlate additional events and better understand the sequence of activity.
 
@@ -139,7 +139,7 @@ Expanded the timeline to correlate additional events and better understand the s
 
 ## 10. Incident Timeline and Investigation
 
-![Incident Timeline](Splunk%207%20incident-passwrodreset-logins.png)
+![Password Reset and Login Investigation](screenshots/Splunk%207%20incident-passwordreset-logins.png)
 
 Created an incident timeline involving password reset activity and subsequent login events.
 
