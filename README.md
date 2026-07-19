@@ -35,7 +35,7 @@ The project simulates a basic Security Operations Center (SOC) workflow by colle
 
 ## 1. Configuring Windows Audit Policies
 
-![Audit Policy Configuration](Splunk%201%20audit%20policy%20config.png)
+![Windows Audit Policy Configuration](screenshots/Splunk%201%20audit%20policy%20config.png)
 
 Configured Windows audit policies to generate security telemetry for important system and user activity.
 
