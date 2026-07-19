@@ -55,13 +55,13 @@ Monitoring process creation provides visibility into potentially suspicious acti
 
 ## 3. Receiving Windows Events in Splunk
 
-![Receiving Windows Events](Splunk%203%20Receiving%20windows%20events.png)
+![Receiving Windows Events](screenshots/Splunk%203%20Receiving%20windows%20events.png)
 
 Verified that Windows event data was being received and indexed by Splunk.
 
 Centralizing Windows telemetry in a SIEM allows analysts to search and investigate security activity from a single platform.
 
-![Receiving Windows Events Part 2](Splunk%203%20Receiving%20windows%20events%20pt.2.png)
+![Receiving Windows Events Part 2](screenshots/Splunk%203%20Receiving%20windows%20events%20pt.2.png)
 
 Confirmed additional Windows event data was being successfully received and processed by Splunk.
 
