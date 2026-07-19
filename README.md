@@ -95,7 +95,7 @@ Investigated process creation events collected from the Windows system.
 
 Process creation logs provide visibility into programs and commands executed on a system and can assist analysts in identifying suspicious activity.
 
-![PowerShell Process Detection](screenshots/Splunk%205%20powershell-process-detection.png)
+![Process Creation Event Part 2](screenshots/Splunk%204%20process%20creation%20evt%20pt.2.png)
 
 Reviewed additional process creation event data to further analyze the activity recorded by Windows.
 
