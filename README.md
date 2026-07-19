@@ -79,7 +79,7 @@ Monitoring account creation is important because unauthorized accounts can poten
 
 ## 5. Generating and Investigating a Failed Login
 
-![Process Creation Event Part 2](screenshots/Splunk%204%20process%20creation%20evt%20pt.2.png)
+![Failed Login Event](screenshots/Splunk%204%20creating%20a%20failed%20login.png)
 
 Generated a failed authentication event to simulate suspicious login activity.
 
