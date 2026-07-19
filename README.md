@@ -1,45 +1,55 @@
 # 📊 Splunk SIEM Home Lab
 
-## Project Overview
+## 🎯 Project Overview
 
-This project documents the configuration and use of Splunk as a Security Information and Event Management (SIEM) platform.
+This project documents the implementation of a Splunk SIEM home lab used to collect, monitor, and investigate Windows security events.
 
-The lab focuses on collecting Windows security telemetry, monitoring system activity, investigating authentication events, detecting process activity, and building an incident timeline.
+The project simulates a basic Security Operations Center (SOC) workflow by collecting Windows telemetry, monitoring process and authentication activity, and building an investigation timeline from security events.
 
-The goal of this project was to simulate a basic Security Operations Center (SOC) investigation workflow.
+### Skills Demonstrated
+
+- SIEM fundamentals
+- Splunk log ingestion
+- Windows Event Log analysis
+- Audit policy configuration
+- Process creation monitoring
+- Authentication monitoring
+- PowerShell detection
+- Incident timeline development
+- Security event investigation
 
 ---
 
-## Lab Environment
+# 🛠️ Lab Environment
 
 - Splunk SIEM
 - Windows 11
 - Windows Security Event Logs
 - Windows Audit Policies
 - PowerShell
-- Virtualized Home Lab Environment
+- Virtualized home lab environment
 
 ---
 
-# SOC Investigation Workflow
+# 🔍 Investigation Walkthrough
 
 ## 1. Configuring Windows Audit Policies
 
-![Splunk Audit Policy Configuration](Splunk%201%20audit%20policy%20config.png)
+![Audit Policy Configuration](Splunk%201%20audit%20policy%20config.png)
 
-Configured Windows audit policies to generate security telemetry that could be collected and analyzed by Splunk.
+Configured Windows audit policies to generate security telemetry for important system and user activity.
 
-Audit policy configuration is an important first step in security monitoring because a SIEM can only analyze events that are being properly generated and logged.
+Audit policy configuration is an important first step in security monitoring because the SIEM can only analyze events that are being generated and collected.
 
 ---
 
-## 2. Enabling Process Creation Logging
+## 2. Enabling Process Creation Auditing
 
-![Process Creation Logging](Splunk%202%20Process%20creation.png)
+![Process Creation Configuration](Splunk%202%20Process%20creation.png)
 
 Configured process creation auditing to monitor when new processes are launched on the Windows system.
 
-Process creation events can provide valuable information during investigations by showing which programs were executed and when they were launched.
+Monitoring process creation provides visibility into potentially suspicious activity, including the execution of scripts, administrative tools, and other processes.
 
 ---
 
@@ -47,35 +57,33 @@ Process creation events can provide valuable information during investigations b
 
 ![Receiving Windows Events](Splunk%203%20Receiving%20windows%20events.png)
 
-Verified that Windows event data was successfully being received and indexed by Splunk.
+Verified that Windows event data was being received and indexed by Splunk.
 
-This demonstrates the log collection stage of the SIEM workflow, where endpoint telemetry is centralized for searching and investigation.
+Centralizing Windows telemetry in a SIEM allows analysts to search and investigate security activity from a single platform.
 
-### Additional Event Data
+![Receiving Windows Events Part 2](Splunk%203%20Receiving%20windows%20events%20pt.2.png)
 
-![Additional Windows Events](Splunk%203%20Receiving%20windows%20events%20pt.2.png)
-
-Reviewed additional Windows event data being received by Splunk to verify that the logging pipeline was functioning correctly.
+Confirmed additional Windows event data was being successfully received and processed by Splunk.
 
 ---
 
-## 4. Investigating Account Creation
+## 4. Investigating Account Creation Activity
 
 ![Account Creation Event](Splunk%204%20acct%20creation%20event.png)
 
-Investigated account creation activity within the Windows event logs.
+Investigated a Windows account creation event within Splunk.
 
 Monitoring account creation is important because unauthorized accounts can potentially be used to maintain persistence or gain access to systems.
 
 ---
 
-## 5. Investigating Failed Authentication
+## 5. Generating and Investigating a Failed Login
 
-![Failed Login Investigation](Splunk%204%20creating%20a%20failed%20login.png)
+![Failed Login](Splunk%204%20creating%20a%20failed%20login.png)
 
-Generated and investigated a failed login event to simulate suspicious authentication activity.
+Generated a failed authentication event to simulate suspicious login activity.
 
-Failed authentication attempts can be indicators of password guessing, brute-force activity, or user authentication errors. The event must be analyzed in context to determine whether the activity is suspicious.
+Failed authentication attempts can be important indicators during a security investigation, particularly when multiple failures occur within a short period of time.
 
 ---
 
@@ -83,15 +91,13 @@ Failed authentication attempts can be indicators of password guessing, brute-for
 
 ![Process Creation Event](Splunk%204%20process%20creation%20evt.png)
 
-Reviewed process creation events collected from the Windows system.
+Investigated process creation events collected from the Windows system.
 
-Process monitoring allows analysts to investigate what programs were executed and can help identify potentially suspicious or unexpected activity.
+Process creation logs provide visibility into programs and commands executed on a system and can assist analysts in identifying suspicious activity.
 
-### Additional Process Event Analysis
+![Process Creation Event Part 2](Splunk%204%20process%20creation%20evt%20pt.2.png)
 
-![Additional Process Creation Event](Splunk%204%20process%20creation%20evt%20pt.2.png)
-
-Performed additional analysis of process creation telemetry to examine the available event information during an investigation.
+Reviewed additional process creation event data to further analyze the activity recorded by Windows.
 
 ---
 
@@ -99,88 +105,78 @@ Performed additional analysis of process creation telemetry to examine the avail
 
 ![PowerShell Process Detection](Splunk%205%20powershell-process-detection.png)
 
-Created a detection focused on PowerShell process activity.
+Created a Splunk search to identify PowerShell process activity.
 
-PowerShell is a legitimate Windows administration tool, but it is also commonly monitored by security teams because attackers may abuse it to execute commands, automate activity, or perform post-compromise actions.
+PowerShell is a legitimate administrative tool but is also frequently monitored by security teams because it can be used to execute scripts and perform administrative actions.
 
-Monitoring PowerShell execution provides valuable visibility during endpoint investigations.
-
----
-
-# 8. SOC Dashboard
-
-![Splunk SOC Dashboard](Splunk%206%20splunk-soc-dashboard.png)
-
-Created a SOC-focused dashboard to provide a centralized view of security-related activity.
-
-Dashboards can help analysts quickly identify trends, investigate events, and monitor important security telemetry from a single location.
+Monitoring PowerShell activity helps analysts identify potentially suspicious command execution.
 
 ---
 
-# 9. Building an Investigation Timeline
+## 8. Building a SOC Dashboard
+
+![SOC Dashboard](Splunk%206%20splunk-soc-dashboard.png)
+
+Created a security monitoring dashboard to provide a centralized view of important activity observed in the lab environment.
+
+Dashboards can help analysts quickly identify trends and prioritize events for further investigation.
+
+---
+
+## 9. Building an Investigation Timeline
 
 ![Investigation Timeline](Splunk%207%20building%20a%20timeline.png)
 
-Built an investigation timeline to organize security events chronologically.
+Built an investigation timeline by organizing security events in chronological order.
 
-Creating a timeline helps analysts understand the sequence of activity and determine how individual events may be related.
+A timeline allows an analyst to understand how events occurred over time and helps connect related activities during an investigation.
 
-### Additional Timeline Analysis
+![Investigation Timeline Part 2](Splunk%207%20building%20a%20timeline%20pt.2.png)
 
-![Timeline Analysis](Splunk%207%20building%20a%20timeline%20pt.2.png)
-
-Continued analyzing the event timeline to correlate activity and better understand the progression of the investigation.
+Expanded the timeline to correlate additional events and better understand the sequence of activity.
 
 ---
 
-# 10. Incident Investigation
+## 10. Incident Timeline and Investigation
 
-![Incident Investigation](Splunk%207%20incident-passwordreset-logins.png)
+![Incident Timeline](Splunk%207%20incident-passwrodreset-logins.png)
 
-Investigated password reset and authentication-related activity using Splunk.
+Created an incident timeline involving password reset activity and subsequent login events.
 
-This investigation demonstrates how multiple events can be reviewed together to identify relationships between authentication activity and account changes.
-
-A timeline-based approach helps an analyst determine whether activity appears normal or requires additional investigation.
+Organizing events chronologically helps establish a sequence of activity and provides context for determining whether behavior is normal or potentially suspicious.
 
 ---
 
-# Investigation Summary
+# 🔎 Investigation Summary
 
-During this project, I configured and used Splunk to analyze Windows security telemetry and simulate a basic SOC investigation.
+During this project, I configured Windows auditing and used Splunk to collect, search, and investigate security telemetry.
 
 The investigation included:
 
 - Configuring Windows audit policies
 - Monitoring process creation
-- Receiving Windows event data in Splunk
-- Investigating account creation events
-- Analyzing failed authentication attempts
-- Detecting PowerShell process activity
+- Collecting Windows events in Splunk
+- Investigating account creation
+- Generating and analyzing failed login activity
+- Monitoring PowerShell execution
 - Building a SOC dashboard
-- Creating an investigation timeline
-- Reviewing password reset and authentication activity
+- Creating an incident timeline
 
-This project demonstrates a basic SIEM workflow used in Security Operations Center environments:
-
-> **Generate telemetry → Collect logs → Search events → Detect suspicious activity → Correlate events → Investigate the incident**
+This project demonstrates a basic SIEM workflow used in Security Operations Center environments: generating security telemetry, collecting logs, searching events, correlating activity, and investigating potentially suspicious behavior.
 
 ---
 
-# Learning Outcomes
+# 📖 Learning Outcomes
 
 Through this project I developed practical experience with:
 
-- SIEM fundamentals
-- Splunk log ingestion
-- Splunk search and analysis
+- Splunk SIEM
+- Windows event collection
 - Windows audit policies
-- Windows Security Event Logs
-- Process creation monitoring
-- PowerShell activity monitoring
+- Process monitoring
 - Authentication monitoring
-- Account activity investigation
-- Security event correlation
+- PowerShell detection
+- Security event investigation
+- Timeline analysis
 - SOC dashboards
-- Incident timelines
-- Basic detection and investigation workflows
+- Basic incident response workflows
